@@ -4,6 +4,8 @@ import './App.css';
 import NavbarCustom from './componentes/narbar/narbar';  
 import Seccion from './componentes/Seccion/Seccion';
 import Footer from './componentes/Footer/footer';
+import ContactForm from './componentes/Contacto/Contacto';
+import Servicios from './componentes/Servicios/Servicios.jsx';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/Fumitecno" />} />
             <Route path='/Fumitecno' element={<Seccion />} />
+            <Route path='/Servicios' element={<Servicios />} />
+            <Route path='/Contacto' element={<ContactForm />} />
            
           </Routes>
         </main>

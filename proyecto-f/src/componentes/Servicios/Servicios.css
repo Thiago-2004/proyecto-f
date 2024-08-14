@@ -1,0 +1,32 @@
+.ser{
+    text-align: center;
+    padding: 20px;
+    background-color:  rgb(65, 134, 65);
+    color: #fff;
+    margin-top: 30px;
+  }
+
+  .card img{
+    height: 250px;
+  }
+  
+  
+  .tit{
+    font-size: 35px;
+     text-align: center;
+     margin-top: 20px;
+     background-color: rgb(65, 134, 65) ;
+     padding: 30px;
+     color: #fff;
+  }
+  
+  .info{
+      /* background-color: antiquewhite; */
+      margin-top: 30px;
+      font-size: 20px;
+  }
+
+
+  .card-group{
+    margin-bottom: 30px;
+  }
