@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
-import NavbarCustom from './componentes/narbar/narbar';  // Importa el componente de la barra de navegación
+import NavbarCustom from './componentes/narbar/narbar';  
+import Seccion from './componentes/Seccion/Seccion';
 
 function App() {
   return (
@@ -11,10 +12,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Navigate to="/Fumitecno" />} />
-            {/* <Route path='/argentum' element={<Seccion />} />
-            <Route path='/productos' element={<Productos />} />
-            <Route path='/contacto' element={<ContactForm />} />
-            <Route path='/carrito' element={<Carrito />} /> */}
+            <Route path='/Fumitecno' element={<Seccion />} />
            
           </Routes>
         </main>
