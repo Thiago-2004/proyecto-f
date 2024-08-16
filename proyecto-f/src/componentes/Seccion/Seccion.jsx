@@ -11,6 +11,7 @@ import tabla2 from '../../assets/imagenes/tabla2.png';
 import tabla3 from '../../assets/imagenes/tabla3.png';
 import tabla4 from '../../assets/imagenes/tabla4.png';
 import personal from '../../assets/imagenes/personal.png';
+import { Link } from 'react-router-dom'
 
 
 
@@ -102,7 +103,7 @@ function Seccion() {
           <p>DESINSECTACIÓN &#x2705;</p>
           <p>DESRATIZACIÓN &#x2705;</p>
           <hr className="linea" />
-          <a href="#">Contacto</a>
+          <Link to="/contacto">Contacto</Link>
         </Col>
         <Col xs={6}>
           <div className="p-3">

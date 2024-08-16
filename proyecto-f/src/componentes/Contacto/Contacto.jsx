@@ -39,8 +39,11 @@ function ContactForm() {
     return (
 <div>
      <div className='inicio'>
-        <p>CONTACTO</p>
-    </div>
+        <h2><b>CONTACTO</b></h2>
+
+
+        <p>Envíanos tu consulta y a la brevedad te responderemos!!!</p>
+     </div>
 
 
 

@@ -1,7 +1,11 @@
 .inicio{
     padding: 30px;
-    /* background-image: url('/proyecto-f/src/assets/imagenes/fondo.jpg'); */
-    background-Image: url('https://via.placeholder.com/1920x1080');
+    background-color: #292929;
+    color: white;
+}
+
+.inicio p{
+  font-size: 20px;
 }
 
 #contact-form {

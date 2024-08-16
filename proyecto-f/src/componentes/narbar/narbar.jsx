@@ -9,7 +9,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function NavbarCustom() {
  return (
-    <Navbar expand="lg" sticky="top" className="bg-celeste fs-3">
+    <Navbar  className="bg-celeste fs-3">
       <Container>
         <Navbar.Brand as={Link} to="/Fumitecno">
           <img className='logo' src={logo} alt="Fumitecno" />
