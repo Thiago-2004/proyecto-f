@@ -1,43 +1,3 @@
-/* .empresa h3{
-    margin-top: 25px;
-    margin-bottom: 15px;
-   
-    margin-left: 20px;
-}
-
-.empresa p{
-  margin-left: 20px;
-}
-
-.valores{
-  margin-top: 10px;
-  
-  margin-left: 20px;
-}
-
-
-.vision h3{
-  margin-top: 10px;
-  margin-left: 20px;
-
-}
-
-.vision p{
-  margin-left: 20px;
-}
-
-.confian{
-  margin-top: 30px;
-  margin-left: 20px;
-}
-
-.carousel-item img{
-  height: 350px;
-  width: 30vh;
-  padding: 30px;
-  } */
-
-
 
   .empresa-container {
     padding: 20px;
@@ -48,37 +8,13 @@
   .empresa {
     margin-bottom: 20px;
   }
-
-  .empresa p  { 
-     background-color: #4bb65b;
-     padding: 50px;
+  
+  .empresa p { 
+    background-color: #4bb65b;
+    padding: 50px;
     color: white;
     border-radius: 60px;
-}
-  
-  .accordion-button {
-    background-color: #ffffff;
-    color: rgb(27, 164, 38);
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    text-align: left;
-    outline: none;
-    transition: background-color 0.3s ease;
   }
-  
-  .accordion-button:hover {
-    background-color: #2eb440;
-  }
-  
-  .accordion-body {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-top: none;
-    background-color: white;
-  }
-  
 
   .vision p{
     background-color: #4bb65b;
@@ -87,3 +23,65 @@
     border-radius: 60px;
 
   }
+  
+  .carousel-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-images {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel.animating .carousel-images {
+    transform: translateX(-100%);
+  }
+  
+  .carousel img {
+    width: 300px;  /* Fijar el ancho a 300px */
+    height: 300px; /* Fijar la altura a 300px */
+    object-fit: cover; /* Asegurarse de que la imagen llene el espacio sin distorsionarse */
+    border-radius: 10px;
+  }
+  
+  .carousel-button {
+    background-color: #2eb440;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 10px;
+  }
+  
+  .carousel-button:hover {
+    background-color: #1a7d2b;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .carousel-images {
+      flex-direction: column;
+    }
+  
+    .carousel img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .carousel-button {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+  

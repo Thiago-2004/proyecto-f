@@ -78,7 +78,7 @@ function Servicios() {
 export default Servicios;*/
 
 import React from 'react';
-import './Servicios.css'; // Opcional: Si tienes estilos específicos.
+import './Servicios.css'; 
 import cucarachas from '../../assets/imagenes/cucarachas.webp';
 import desifeccion from '../../assets/imagenes/desifeccion.webp';
 import 'bootstrap/dist/css/bootstrap.min.css';

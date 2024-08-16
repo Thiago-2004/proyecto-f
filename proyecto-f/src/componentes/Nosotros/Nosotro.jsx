@@ -1,12 +1,59 @@
-        import React, { useState } from 'react';
-import './Nosotros.css'; // Asegúrate de tener una hoja de estilos para el componente.
+  import React, { useState } from 'react';
+import './Nosotros.css';
+import gobbi from '../../assets/imagenes/gobbi.jpeg';
+import lideres from '../../assets/imagenes/lideres2.png';
+import krim from '../../assets/imagenes/krim.png';
+import filardi from '../../assets/imagenes/filardi.png';
+import freeway from '../../assets/imagenes/freeway.png';
+import peugeot from '../../assets/imagenes/peugeot2.png';
+import renault from '../../assets/imagenes/renault.png';
+import la4 from '../../assets/imagenes/la4.png';
+import drf from '../../assets/imagenes/drf.png';
+
+
+
 
 function Nosotros() {
-  const [activeSection, setActiveSection] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const toggleSection = (section) => {
-    setActiveSection(activeSection === section ? null : section);
+  const images = [
+    gobbi, // Imagen 1
+    filardi, // Imagen 2
+    lideres, // Imagen 3
+    freeway, // Imagen 4
+    renault, // Imagen 5
+    krim,  // Imagen 6
+    peugeot, // Imagen 7
+    la4, // Imagen 8
+    drf  // Imagen 9
+  ];
+
+  const imagesPerPage = 3; // Número de imágenes que se muestran a la vez
+  const totalPages = Math.ceil(images.length / imagesPerPage);
+
+  const nextImages = () => {
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentIndex((currentIndex + 1) % totalPages);
+        setIsAnimating(false);
+      }, 500); // Duración de la animación
+    }
   };
+
+  const prevImages = () => {
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentIndex((currentIndex - 1 + totalPages) % totalPages);
+        setIsAnimating(false);
+      }, 500); // Duración de la animación
+    }
+  };
+
+  const startIndex = currentIndex * imagesPerPage;
+  const selectedImages = images.slice(startIndex, startIndex + imagesPerPage);
 
   return (
     <div className="empresa-container">
@@ -21,52 +68,21 @@ function Nosotros() {
         </p>
       </div>
 
-      <h3 className="valores">Valores:</h3>
-
-      <div className="accordion">
-        <div className="accordion-item">
-          <h2 className="accordion-header" onClick={() => toggleSection(1)}>
-            <button className={`accordion-button ${activeSection === 1 ? '' : 'collapsed'}`}>
-              Compromiso
-            </button>
-          </h2>
-          <div className={`accordion-collapse collapse ${activeSection === 1 ? 'show' : ''}`}>
-            <div className="accordion-body">
-              Compromiso con nuestros clientes, priorizando la satisfacción de sus demandas.
-            </div>
+      <div className="carousel-container">
+        <h3><b>Clientes satisfechos y agradecidos!</b></h3>
+        <div className={`carousel ${isAnimating ? 'animating' : ''}`}>
+          <button onClick={prevImages} className="carousel-button">←</button>
+          <div className="carousel-images">
+            {selectedImages.map((image, index) => (
+              <img key={index} src={image} alt={`Imagen ${index + 1}`} />
+            ))}
           </div>
+          <button onClick={nextImages} className="carousel-button">→</button>
         </div>
-
-        <div className="accordion-item">
-          <h2 className="accordion-header" onClick={() => toggleSection(2)}>
-            <button className={`accordion-button ${activeSection === 2 ? '' : 'collapsed'}`}>
-              Respeto
-            </button>
-          </h2>
-          <div className={`accordion-collapse collapse ${activeSection === 2 ? 'show' : ''}`}>
-            <div className="accordion-body">
-              Respeto en el trato de personal, con liderazgo y motivación.
-            </div>
-          </div>
-        </div>
-
-        <div className="accordion-item">
-          <h2 className="accordion-header" onClick={() => toggleSection(3)}>
-            <button className={`accordion-button ${activeSection === 3 ? '' : 'collapsed'}`}>
-              Trabajo en Equipo
-            </button>
-          </h2>
-          <div className={`accordion-collapse collapse ${activeSection === 3 ? 'show' : ''}`}>
-            <div className="accordion-body">
-              Colaboración y trabajo en equipo, compartiendo nuevas ideas, soluciones y experiencias.
-            </div>
-          </div>
-        </div>
-        {/* Puedes agregar más elementos del acordeón para los otros valores. */}
       </div>
 
       <div className="vision">
-      <h3><b>VISION DE EMPRESA</b></h3>
+        <h3><b>VISIÓN DE EMPRESA</b></h3>
         <p>
           Ser una empresa líder en el mercado local, en el servicio de control de plagas, brindando la mayor calidad y
           efectividad en el servicio a un precio competitivo, que nos permita crecer y buscar una mejor calidad de
@@ -78,3 +94,5 @@ function Nosotros() {
 }
 
 export default Nosotros;
+
+
