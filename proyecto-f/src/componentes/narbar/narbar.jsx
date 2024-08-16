@@ -17,7 +17,7 @@ function NavbarCustom() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
-            <Nav.Link as={Link} to="/productos">Nosotros</Nav.Link>
+            <Nav.Link as={Link} to="/Nosotros">Nosotros</Nav.Link>
             <Nav.Link as={Link} to="/servicios">Servicios</Nav.Link>
             <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
           </Nav>

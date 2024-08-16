@@ -6,6 +6,7 @@ import Seccion from './componentes/Seccion/Seccion';
 import Footer from './componentes/Footer/footer';
 import ContactForm from './componentes/Contacto/Contacto';
 import Servicios from './componentes/Servicios/Servicios.jsx';
+import Nosotros from './componentes/Nosotros/Nosotro.jsx';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Navigate to="/Fumitecno" />} />
             <Route path='/Fumitecno' element={<Seccion />} />
             <Route path='/Servicios' element={<Servicios />} />
+            <Route path='/Nosotros' element={<Nosotros />} />
             <Route path='/Contacto' element={<ContactForm />} />
            
           </Routes>

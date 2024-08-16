@@ -1,41 +1,49 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import './Contacto.css';
+import fondo from '../../assets/imagenes/fondo.jpg';
 
 function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-    emailjs.sendForm('service_36gpmhq', 'template_uz549af', e.target, 'MOPhU1WgO2xi4Sx6S')
-      .then((result) => {
-        console.log(result.text);
-        alert("Email enviado exitosamente");
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-        });
-      }, (error) => {
-        console.log(error.text);
-        alert("Ocurrió un error al enviar el email");
-      });
-  };
+        emailjs.sendForm('service_36gpmhq', 'template_uz549af', e.target, 'MOPhU1WgO2xi4Sx6S')
+            .then((result) => {
+                console.log(result.text);
+                alert("Email enviado exitosamente");
+                setFormData({
+                    name: '',
+                    email: '',
+                    message: '',
+                });
+            }, (error) => {
+                console.log(error.text);
+                alert("Ocurrió un error al enviar el email");
+            });
+    };
 
-  return (
+    return (
+<div>
+     <div className='inicio'>
+        <p>CONTACTO</p>
+    </div>
+
+
+
     <form onSubmit={handleSubmit} id="contact-form">
       <div>
         <label htmlFor="name">Nombre:</label>
@@ -70,8 +78,9 @@ function ContactForm() {
         />
       </div>
       <button type="submit">Enviar</button>
-    </form>
-  );
+    </form> 
+    </div>
+    );
 }
 
 export default ContactForm;
