@@ -93,7 +93,7 @@ h3{text-align: center;}
   }
   
   .empresa {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   
   .empresa p {
@@ -102,6 +102,7 @@ h3{text-align: center;}
     color: white;
     border-radius: 5px;
     font-size: 20px;
+    
   }
   
   .vision p {
@@ -111,10 +112,14 @@ h3{text-align: center;}
     border-radius: 5px;
     font-size: 20px;
   }
+
+  .vision{
+    margin-top: 60px;
+  }
   
   .carousel-container {
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 60px;
     text-align: center;
   }
   
