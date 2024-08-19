@@ -45,6 +45,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 3px;
+    
 }
 
 .footer-content ul li {
@@ -52,9 +54,14 @@ footer {
 }
 
 .footer-content ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 16px;
+}
+
+.footer-content a{
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .footer-content ul li a:hover {
