@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://thiago-2004.github.io/proyecto-f",
+  "homepage": "https://thiago-2004.github.io/proyecto-f/",
 
   "scripts": {
     "dev": "vite",
